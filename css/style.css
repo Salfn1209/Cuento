@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/032/604/490/large/gonzo-snow-mictlan-finale-arts.jpg?1606926486");
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center center; /* Centra la imagen en el contenedor */
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: yellow;
+}
+
+.flipbook{
+  width: 1080px;
+  height: 720px;
+}
+
+.flipbook .hard{
+  background-image: url("https://wallpapercave.com/wp/wp13160835.jpg");
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center center; /* Centra la imagen en el contenedor */
+  color: white;
+  font-weight: bold;
+  border: none;
+  
+}
+
+.cover-text {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo translúcido para que se lea mejor */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cover-text h1 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.cover-text small {
+  font-size: 16px;
+  color: #ddd;
+}
+
+
+
+.flipbook .hard  small{
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.flipbook .page{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY2HKWoc-OXr1sCnEe_mvcyIALwThYvDFdrQ&s");
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center center; /* Centra la imagen en el contenedor */
+  display: block; /* o simplemente elimina el display:flex */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  overflow: hidden; /* evita que se desborde algo */
+
+}
+
+.page{
+  text-align: center;
+}
+
+.page-content {
+  padding: 40px 50px; /* aquí va el margen del contenido */
+  height: 100%;
+  box-sizing: border-box;
+  text-align: justify;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.page img{
+  width: 70%;
+  object-fit:  cover;
+  margin:auto;
+}
+
+.flipbook .page small{
+  font-size:  14px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .flipbook {
+    width: 95vw;
+    height: 70vh;
+    transform: scale(0.9); /* Ajuste opcional para encajar mejor */
+  }
+
+  .page img {
+    width: 90%;
+  }
+
+  .flipbook .page {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .flipbook .hard {
+    background-size: cover;
+    background-position: center;
+  }
+}
