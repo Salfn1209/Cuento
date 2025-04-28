@@ -22,6 +22,56 @@ body{
   width: 1080px;
   height: 720px;
 }
+.hard {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;      /* Centra verticalmente */
+  height: 100vh;            /* Altura completa de la ventana (puedes ajustar) */
+}
+
+#titulo {
+  margin: 0;
+  font-size: 2.5em;         /* Opcional: tamaño del título */
+  color: black;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  background-color: rgba(245, 245, 245, 0.5); /* whitesmoke con 70% opacidad */
+  backdrop-filter: blur(4px); /* efecto de vidrio esmerilado */
+
+}
+.page, .hard {
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.3), 0 0 10px rgba(0,0,0,0.2);
+}
+
+.page-content {
+  color: #1c1c1c;
+}
+
+
+
+#titulo {
+  animation: fadeInDown 1.2s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.page:last-child .page-content {
+  color: #000000;
+  text-align: justify;
+  padding: 50px;
+  border-radius: 10px;
+}
+
 
 .flipbook .hard{
   background-image: url("https://wallpapercave.com/wp/wp13160835.jpg");
